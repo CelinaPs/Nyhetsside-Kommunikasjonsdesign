@@ -1128,6 +1128,7 @@ section {
   line-height: 1.7;
 }
 
+/* Title */
 .future-title {
   font-size: 3rem;
   font-weight: 900;
@@ -1135,6 +1136,7 @@ section {
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Intro text */
 .future-intro {
   max-width: 650px;
   margin: 0 auto 4rem;
@@ -1143,34 +1145,97 @@ section {
   text-align: left;
 }
 
-/* Snakkeboble */
-.speech-bubble {
-  max-width: 650px;
+/* ------------------------------
+   BUBBLE SYSTEM (with portraits)
+   ------------------------------ */
+
+.bubble-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
   margin: 3rem auto;
-  background: #ffffff;
-  color: #0b2f56;
-  padding: 2rem 2.5rem;
-  border-radius: 30px;
-  border-top-left-radius: 50px;
+  max-width: 650px;
   position: relative;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: left;
 }
 
-/* Snakkeboble-tuppen */
-.speech-bubble::after {
+/* Left = image → bubble */
+.bubble-block.left {
+  justify-content: flex-start;
+}
+
+/* Right = bubble → image */
+.bubble-block.right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+/* Profile pictures */
+.bubble-image {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Speech bubble core */
+.speech-bubble {
+  background: #ffffff;
+  color: #0b2f56;
+  padding: 1.7rem 2rem;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.speech-bubble p {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* BUBBLE POINTER — LEFT */
+.bubble-block.left .speech-bubble::after {
   content: "";
   position: absolute;
-  bottom: -30px;
-  left: 60px;
+  left: -22px;
+  top: 32px;
   width: 0;
   height: 0;
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-top: 30px solid #ffffff;
-  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.25));
+  border-style: solid;
+  border-width: 15px 22px 15px 0;
+  border-color: transparent #ffffff transparent transparent;
+  filter: drop-shadow(-3px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+/* BUBBLE POINTER — RIGHT */
+.bubble-block.right .speech-bubble::after {
+  content: "";
+  position: absolute;
+  right: -22px;
+  top: 32px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 22px;
+  border-color: transparent transparent transparent #ffffff;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.15));
+}
+
+/* Fade-in integration */
+.bubble-block.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.1s ease-out, transform 1.1s ease-out;
+}
+
+.bubble-block.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* --- A WORLD BELOW THE WAVES --- */
@@ -1257,13 +1322,6 @@ section {
   letter-spacing: 0.05em;
   font-size: 0.9rem;
   color: #ffffff;
-}
-
-.oss-footer .oss-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 2rem 0 1.5rem;
-  letter-spacing: 0.1em;
 }
 
 .oss-footer a {
@@ -1981,7 +2039,8 @@ section {
 
   .extraction-title {
     font-size: 1.3rem;
-    max-width: 400px;
+    max-width: 365px;
+    margin: 0 auto;
   }
 
   .intro-text {
@@ -2041,6 +2100,8 @@ section {
     text-align: left;
     padding: 0 0.5rem;
   }
+
+  /* --- PRECISION SECTION --- */
 
   .section-precision {
     height: auto !important;

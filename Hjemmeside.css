@@ -107,7 +107,7 @@
 
 .news-card {
   display: block;
-  background-color: #cccccc;
+  background-color: #e4e4e4;
   border-radius: 6px;
   overflow: hidden;
   text-decoration: none;
@@ -170,6 +170,10 @@
   font-size: 1rem;
   color: #ffffff;
   margin: 0;
+}
+
+.hjemmeside-footer figure {
+  font-size: 13px;
 }
 
 /* Responsiv design */
