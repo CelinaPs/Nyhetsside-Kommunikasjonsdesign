@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nyhetsforside</title>
+    <link rel="stylesheet" href="Hjemmeside.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="nrk-header">
+      <div class="header-left">
+        <img src="nrk-logo.png" alt="NRK logo" class="nrk-logo" />
+
+        <nav class="menu">
+          <a href="Hjemmeside.html">Nyheter</a>
+          <a href="#">Sport</a>
+          <a href="#">Kultur</a>
+          <a href="#">Humor</a>
+          <a href="#">Distrikt</a>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <a href="#" class="login-link">Logg på</a>
+
+        <!-- Mobil hamburger ikon -->
+        <div class="hamburger" id="hamburgerMenu">≡</div>
+      </div>
+    </header>
+
+    <!-- MOBIL FULLSKJERM-MENY -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+      <div class="mobile-menu-content">
+        <button class="close-menu" id="closeMenu">✕</button>
+
+        <nav class="mobile-menu-links">
+          <a href="Hjemmeside.html">Nyheter</a>
+          <a href="#">Sport</a>
+          <a href="#">Kultur</a>
+          <a href="#">Humor</a>
+          <a href="#">Distrikt</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="news-grid">
+      <!-- ARTIKKEL 1 -->
+      <a href="Artikkel-olje/Olje.html" class="news-card">
+        <img src="Artikkel-olje/Olje- bilde-1.png" alt="Artikkel 1" />
+        <h3>Beneath the Surface: Understanding Norway’s Offshore Oil Work</h3>
+      </a>
+
+      <!-- ARTIKKEL 2 -->
+      <a href="artikkel2.html" class="news-card">
+        <img src="bilder/artikkel2.jpg" alt="Artikkel 2" />
+        <h3>Drapet på tre år gamle Laila – hva skjedde?</h3>
+      </a>
+
+      <!-- ARTIKKEL 3 -->
+      <a href="artikkel3.html" class="news-card">
+        <img src="bilder/artikkel3.jpg" alt="Artikkel 3" />
+        <h3>Svindler tusener – lever luksusliv</h3>
+      </a>
+
+      <!-- ARTIKKEL 4 -->
+      <a href="artikkel4.html" class="news-card">
+        <img src="bilder/artikkel4.jpg" alt="Artikkel 4" />
+        <h3>Norsk milliardærfrue kjemper hesten sin</h3>
+      </a>
+    </main>
+
+    <script src="Hjemmeside.js"></script>
+  </body>
+
+  <!--Footer -->
+  <footer class="hjemmeside-footer">
+    <img src="nrk-logo.png" alt="NRK logo" class="footer-nrk-logo" />
+    <div class="hjemmeside-credits">
+      <div class="credit">
+        <span class="role">Journalist</span>
+        <span class="name">Sara Amel Bejaoui</span>
+      </div>
+
+      <div class="credit">
+        <span class="role">Designer</span>
+        <span class="name">Aini Aynazar</span>
+      </div>
+
+      <div class="credit">
+        <span class="role">Web development</span>
+        <span class="name">Celina Wedul Dahl-Jacobsen</span>
+      </div>
+
+      <div class="credit">
+        <span class="role">Producer</span>
+        <span class="name">Marte Halvorsen</span>
+      </div>
+    </div>
+  </footer>
+</html>
