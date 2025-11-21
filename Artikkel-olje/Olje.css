@@ -1190,6 +1190,7 @@ section {
   position: relative;
   max-width: 500px;
   line-height: 1.6;
+  text-align: left;
 }
 
 .speech-bubble p {
@@ -1337,6 +1338,7 @@ section {
     box-sizing: border-box;
   }
 
+  html,
   body {
     overflow-x: hidden;
   }
@@ -1428,7 +1430,7 @@ section {
   }
 
   .image-wrapper img {
-    max-width: 260px;
+    max-width: 400px;
   }
 
   .popup-box {
@@ -1608,29 +1610,68 @@ section {
   }
 
   /* --- PRECISION SECTION --- */
+
+  .section-precision {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 3rem 2rem;
+  }
+
+  .precision-content {
+    position: static !important;
+    top: auto !important;
+    transform: none !important;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
   .precision-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    text-align: center;
   }
 
   .precision-intro {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     max-width: 550px;
     text-align: left;
+    margin: 0 auto 1.5rem;
+    padding: 0;
+  }
+
+  .precision-list {
+    list-style: disc !important;
+    padding-left: 1.5rem !important;
     margin: 0 auto;
+    max-width: 550px;
   }
 
   .precision-list li {
-    font-size: 1.1rem;
-    max-width: 550px;
-    text-align: left;
-    margin: 1rem;
+    font-size: 1.2rem !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    margin-bottom: 1rem;
+  }
+
+  .precision-list li::before {
+    display: none !important;
+  }
+
+  .precision-list li::marker {
+    font-size: 2em;
   }
 
   .precision-quote {
-    font-size: 17px;
+    font-size: 1.1rem;
     max-width: 550px;
     text-align: left;
-    margin: 0 auto;
+    margin: 2rem auto 0;
+    padding: 0;
+  }
+
+  .precision-quote.visible {
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   /* --- COOPERATION --- */
@@ -1766,6 +1807,10 @@ section {
   .speech-bubble {
     font-size: 1rem;
     padding: 1.4rem;
+    max-width: 550px;
+  }
+
+  .bubble-block {
     max-width: 550px;
   }
 
@@ -2128,6 +2173,8 @@ section {
   }
 
   .precision-list {
+    max-width: 365px;
+    margin: 0 auto !important;
     list-style: disc !important;
     padding-left: 1.5rem !important;
     margin: 0;
@@ -2141,6 +2188,10 @@ section {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  .precision-list li::marker {
+    font-size: 1.4em;
   }
 
   .precision-list li::before {
@@ -2298,9 +2349,13 @@ section {
   }
 
   .speech-bubble {
-    font-size: 0.9rem;
+    font-size: 14;
     padding: 1.2rem;
     max-width: 365px;
+  }
+
+  .bubble-block {
+    max-width: 380px;
   }
 
   /* --- BELOW WAVES --- */
